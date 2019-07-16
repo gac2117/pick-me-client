@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import RestaurantList from '../components/restaurants/RestaurantList';
+import RestaurantInput from '../components/restaurants/RestaurantInput';
 
 class RestaurantContainer extends Component {
 	render() {
 		return (
 			<div>
-				<RestaurantList />
+				<RestaurantInput />
 			</div>
 		)
 	}
