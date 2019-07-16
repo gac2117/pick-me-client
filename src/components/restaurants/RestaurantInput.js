@@ -11,8 +11,7 @@ class RestaurantInput extends Component {
 
 	handleChange(e) {
 		this.setState({
-			name: e.target.value,
-			location: e.target.value
+			[e.target.name]: e.target.value,
 		})
 	}
 
@@ -29,8 +28,10 @@ class RestaurantInput extends Component {
 		return(
 			<div>
 				<form onSubmit={(e) => this.handleSubmit(e)}>
-					<label>Add Restaurant: </label>
-					<input type:"text" value={this.state.name} onChange={(e) => handleChange(e)} />
+					<label>Restaurant Name: </label>
+					<input type="text" name="name" value={this.state.name} onChange={(e) => handleChange(e)} />
+					<label>Restaurant Location: </label>
+					<input type="text" name="location" value={this.state.location} 
 					<input type="submit" />
 				</form>
 			</div>
