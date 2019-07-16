@@ -18,11 +18,12 @@ class RestaurantInput extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.dispatch({type: 'ADD_RESTAURANT', info:this.state })
+		const info = this.state;
+		this.props.addRestaurant(info);
 		this.setState({
 			name: '',
 			location: ''
-		})
+		});
 	}
 
 	render() {

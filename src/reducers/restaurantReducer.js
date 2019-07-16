@@ -3,7 +3,6 @@ export default function restaurantReducer(state = {
 }, action){
 	switch(action.type){
 		case 'ADD_RESTAURANT':
-			console.log({restaurants: state.restaurants.concat(action.info)})
 			return { restaurants: state.restaurants.concat(action.info)}
 		default:
 			return state;
