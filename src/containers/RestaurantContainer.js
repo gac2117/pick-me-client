@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
+import { connect } from 'react-redux';
+import { fetchRestaurants } from '../actions/restaurantActions'
+
  
 class RestaurantContainer extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			restaurants: []
-		}
-		console.log(this.state)
-	}
-
 	componentWillMount() {
-		fetch('http://localhost:3000/api/restaurants')
-			.then(res => res.json())
-			.then(data => this.setState({restaurants: data}));
+		this.props.fetchRestaurants();
 	}
 
 	render() {
-		const restaurantList = this.state.restaurants.map(restaurant => (
+		const restaurantList = this.props.restaurants.map(restaurant => (
 			<div key={restaurant.id}>
 			<h3>{restaurant.attributes.name}</h3>
 			<p>{restaurant.attributes.location}</p>
@@ -36,4 +29,8 @@ class RestaurantContainer extends Component {
 	}
 }
 
-export default RestaurantContainer;
+const mapStateToProps = state => ({
+	restaurants: state.restaurants.items
+})
+
+export default connect(mapStateToProps, {fetchRestaurants})(RestaurantContainer);

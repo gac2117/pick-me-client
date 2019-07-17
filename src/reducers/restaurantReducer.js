@@ -6,9 +6,12 @@ const initialState = {
 }
 
 export default function(state = initialState, action) {
-	switch(action.type){
+	switch(action.type) {
 		case 'FETCH_RESTAURANTS':
-			return 
+			return {
+				...state, 
+				items: action.payload
+			}
 		default:
 			return state;
 	}
