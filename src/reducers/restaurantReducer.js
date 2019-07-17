@@ -10,8 +10,9 @@ export default function(state = initialState, action) {
 		case 'FETCH_RESTAURANTS':
 			return {
 				...state, 
-				items: action.payload
+				items: action.payload.data
 			}
+
 		default:
 			return state;
 	}
