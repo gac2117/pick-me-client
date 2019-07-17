@@ -8,7 +8,7 @@ class RestaurantInput extends Component {
 			name: '',
 			location: ''
 		};
-	};
+	}
 
 	handleChange(e) {
 		this.setState({
@@ -18,9 +18,22 @@ class RestaurantInput extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const info = this.state;
-		console.log(info)
-		this.props.addRestaurant(info);
+
+		const info = {
+			name: this.state.name,
+			location: this.state.location
+		}
+
+		fetch('http://localhost:3000/api/restaurants', {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(info)
+		})
+		.then(res => res.json())
+		.then(data => console.log(data));
+
 		this.setState({
 			name: '',
 			location: ''
@@ -36,7 +49,7 @@ class RestaurantInput extends Component {
 					<label>Restaurant Location: </label>
 					<input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
 					<br /><br />
-					<input type="submit" />
+					<button type="submit">Add Restaurant</button>
 				</form>
 			</div>
 		)

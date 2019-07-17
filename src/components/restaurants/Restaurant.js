@@ -5,9 +5,9 @@ class Restaurant extends Component {
 		const { restaurant } = this.props;
 		return (
 			<div>
-			<li>
-			{restaurant.name} at {restaurant.location}
-			</li>
+				<li>
+					{restaurant.name} at {restaurant.location}
+				</li>
 			</div>
 		)
 	}
