@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { newRestaurant } from '../actions/restaurantActions';
 
 class RestaurantInput extends Component {
 	constructor(props) {
@@ -24,16 +25,8 @@ class RestaurantInput extends Component {
 			location: this.state.location
 		}
 
-		fetch('http://localhost:3000/api/restaurants', {
-			method: 'POST',
-			headers: {
-				'content-type': 'application/json'
-			},
-			body: JSON.stringify(info)
-		})
-		.then(res => res.json())
-		.then(data => console.log(data));
-
+		this.props.newRestaurant(info);
+		
 		this.setState({
 			name: '',
 			location: ''
@@ -56,4 +49,4 @@ class RestaurantInput extends Component {
 	}
 }
 
-export default connect()(RestaurantInput);
+export default connect(null, { newRestaurant })(RestaurantInput);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
 import { connect } from 'react-redux';
-import { fetchRestaurants } from '../actions/restaurantActions'
+import { fetchRestaurants } from '../actions/restaurantActions' 
 
  
 class RestaurantContainer extends Component {
@@ -13,16 +13,16 @@ class RestaurantContainer extends Component {
 	render() {
 		const restaurantList = this.props.restaurants.map(restaurant => (
 			<div key={restaurant.id}>
-			<h3>{restaurant.attributes.name}</h3>
-			<p>{restaurant.attributes.location}</p>
+			<p>{restaurant.attributes.name} at {restaurant.attributes.location}</p>
 			</div>
 			));
 
 		return (
 			<div>
-			 <h1>Restaurants</h1>
+			 <h3>Add a Restaurant</h3>
 			 <RestaurantInput />
 			 <br />
+			 <h3>List of Restaurants:</h3>
 			 {restaurantList}
 			</div>
 		)
@@ -30,7 +30,8 @@ class RestaurantContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-	restaurants: state.restaurants.items
+	restaurants: state.restaurants.items,
+	newRestaurant: state.restaurants.item 
 })
 
 export default connect(mapStateToProps, {fetchRestaurants})(RestaurantContainer);

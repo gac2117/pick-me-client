@@ -7,10 +7,15 @@ const initialState = {
 
 export default function(state = initialState, action) {
 	switch(action.type) {
-		case 'FETCH_RESTAURANTS':
+		case FETCH_RESTAURANTS:
 			return {
 				...state, 
 				items: action.payload.data
+			};
+		case NEW_RESTAURANT:
+			return {
+				...state,
+				item: action.payload.data.attributes
 			}
 
 		default:
