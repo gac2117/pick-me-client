@@ -19,6 +19,7 @@ class RestaurantInput extends Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const info = this.state;
+		console.log(info)
 		this.props.addRestaurant(info);
 		this.setState({
 			name: '',
@@ -31,9 +32,10 @@ class RestaurantInput extends Component {
 			<div>
 				<form onSubmit={(e) => this.handleSubmit(e)}>
 					<label>Restaurant Name: </label>
-					<input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />
+					<input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} /><br /><br />
 					<label>Restaurant Location: </label>
 					<input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
+					<br /><br />
 					<input type="submit" />
 				</form>
 			</div>

@@ -8,15 +8,17 @@ class RestaurantList extends Component{
 			return (
 				<Restaurant
 				  key={1}
-				  name={restaurant.name}
-				  location={restaurant.location}
+				  restaurant={restaurant}
 				/>
 			)
 		});
 		return(
+			<>
+			<h3>List of Restaurants</h3>
 			<ul>
 			{listOfRestaurants}
 			</ul>
+			</>
 		)
 	}
 }
