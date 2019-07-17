@@ -1,9 +1,14 @@
-export default function restaurantReducer(state = {
-	restaurants: [],
-}, action){
+import { FETCH_RESTAURANTS, NEW_RESTAURANT } from '../actions/types';
+
+const initialState = {
+	items: [],
+	item: {}
+}
+
+export default function(state = initialState, action) {
 	switch(action.type){
-		case 'ADD_RESTAURANT':
-			return { restaurants: state.restaurants.concat(action.info)}
+		case 'FETCH_RESTAURANTS':
+			return 
 		default:
 			return state;
 	}
