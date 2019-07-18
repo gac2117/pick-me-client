@@ -10,7 +10,7 @@ export const fetchRestaurants = () => dispatch => {
 	
 }
 
-export const newRestaurant = restaurantData => dispatch => {
+export const newRestaurant = (restaurantData) => dispatch => {
 	fetch('http://localhost:3000/api/restaurants', {
 			method: 'POST',
 			headers: {
@@ -31,7 +31,7 @@ export const newRestaurant = restaurantData => dispatch => {
 	    .catch(console.log)
 }
 
-export const deleteRestaurant = restaurantId => dispatch => {
+export const deleteRestaurant = (restaurantId) => dispatch => {
 	fetch(`http://localhost:3000/api/restaurants/${restaurantId}`, {
 		method: "DELETE",
 		headers: {

@@ -13,12 +13,13 @@ export default function(state = initialState, action) {
 				items: action.payload.data
 			};
 		case NEW_RESTAURANT:
+			const rest = {id: action.payload.id, attributes: {name: action.payload.name, location: action.payload.location}}
 			return {
 				...state,
-				item: action.payload.data
+				item: rest,
+				items: [...state.items, rest]
 			}
 		case DELETE_RESTAURANT:
-			console.log(action.restaurantId)
 			const restaurants = state.items.filter(restaurant => restaurant.id !== action.id);
 			return {...state, restaurants}
 		default:
