@@ -33,10 +33,9 @@ export const newRestaurant = restaurantData => dispatch => {
 
 export const deleteRestaurant = restaurantId => dispatch => {
 	fetch(`http://localhost:3000/api/restaurants/${restaurantId}`, {
-		credentials: "include",
 		method: "DELETE",
 		headers: {
-				'content-type': 'application/json'
+			'content-type': 'application/json'
 		}
 	})
 	.then(res => res.json())
