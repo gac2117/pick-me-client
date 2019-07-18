@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, NEW_RESTAURANT } from './types';
+import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT } from './types';
 
 export const fetchRestaurants = () => dispatch => {
 	fetch('http://localhost:3000/api/restaurants')
@@ -29,4 +29,26 @@ export const newRestaurant = restaurantData => dispatch => {
 			})}
 	    })
 	    .catch(console.log)
+}
+
+export const deleteRestaurant = restaurantId => dispatch => {
+	fetch(`http://localhost:3000/api/restaurants/${restaurantId}`, {
+		credentials: "include",
+		method: "DELETE",
+		headers: {
+				'content-type': 'application/json'
+		}
+	})
+	.then(res => res.json())
+	.then(data => {
+		if (data.error) {
+			console.log(data.error)
+		} else {
+			dispatch({
+				type: DELETE_RESTAURANT,
+				id: restaurantId
+			})
+		}
+	})
+	.catch(console.log)
 }

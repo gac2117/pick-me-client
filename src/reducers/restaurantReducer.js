@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, NEW_RESTAURANT } from '../actions/types';
+import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT } from '../actions/types';
 
 const initialState = {
 	items: [],
@@ -17,7 +17,10 @@ export default function(state = initialState, action) {
 				...state,
 				item: action.payload.data
 			}
-		
+		case DELETE_RESTAURANT:
+			console.log(action.restaurantId)
+			const restaurants = state.items.filter(restaurant => restaurant.id !== action.id);
+			return {...state, restaurants}
 		default:
 			return state;
 	}

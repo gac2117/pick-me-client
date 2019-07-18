@@ -17,7 +17,7 @@ class RestaurantContainer extends Component {
 			 <h3>Add a Restaurant</h3>
 			 <RestaurantInput />
 			 <br />
-			 <RestaurantList restaurants={this.props.restaurants}/>
+			 <RestaurantList restaurants={this.props.restaurants} />
 			</div>
 		)
 	}
