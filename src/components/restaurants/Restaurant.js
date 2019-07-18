@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 class Restaurant extends Component {
 	render() {
-		const { restaurant } = this.props;
 		return (
-			<div>
+			<>
+			<ul>
 				<li>
-					{restaurant.name} at {restaurant.location}
+					{this.props.restaurant.attributes.name} at {this.props.restaurant.attributes.location}
 				</li>
-			</div>
+				</ul>
+			</>
 		)
 	}
 }
