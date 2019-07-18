@@ -20,8 +20,8 @@ export default function(state = initialState, action) {
 				items: [...state.items, rest]
 			}
 		case DELETE_RESTAURANT:
-			const restaurants = state.items.filter(restaurant => restaurant.id !== action.id);
-			return {...state, restaurants}
+			const rests = state.items.filter(restaurant => restaurant.id !== action.id);
+			return {...state, items: rests}
 		default:
 			return state;
 	}
