@@ -13,8 +13,10 @@ export default function(state = initialState, action) {
 				items: action.payload.data
 			};
 		case NEW_RESTAURANT:
-			return action.payload.data
-
+			return {
+				...state,
+				item: action.payload.data
+			}
 		default:
 			return state;
 	}
