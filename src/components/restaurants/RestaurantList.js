@@ -1,20 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Restaurant from './Restaurant';
 
-const RestaurantList = props => {
-	const restaurants = props.restaurants.map(restaurant =>
-		(
-			<div key={restaurant.id}>
-			<p>{restaurant.attributes.name} at {restaurant.attributes.location}</p>
-			</div>
-		));
+class RestaurantList extends Component {
+	render() {
+		const {restaurants} = this.props;
+		const restaurantList = restaurants.map(restaurant => {
+			return (
+				<Restaurant key={restaurant.id}
+				restaurant={restaurant}
+				/>
+			)
+		})
 
-	return (
-		<>
-		<h3>List of Restaurants:</h3>
-		{restaurants}
-		</>
-	)
+		return(
+			<>
+			<h3>List of Restaurants:</h3>
+			{restaurantList}
+			</>
+		)
+	}
 }
 
 export default RestaurantList;
