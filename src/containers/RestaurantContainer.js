@@ -25,7 +25,8 @@ class RestaurantContainer extends Component {
 
 const mapStateToProps = state => ({
 	restaurants: state.restaurants.items,
-	newRestaurant: state.restaurants.item 
+	newRestaurant: state.restaurants.item,
+	deleteRestaurant: state.restaurants.items
 })
 
 export default connect(mapStateToProps, {fetchRestaurants})(RestaurantContainer);
