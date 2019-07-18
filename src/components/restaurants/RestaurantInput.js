@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { newRestaurant } from '../actions/restaurantActions';
+import { newRestaurant } from '../../actions/restaurantActions'; 
+
 
 class RestaurantInput extends Component {
 	constructor(props) {
@@ -49,4 +50,4 @@ class RestaurantInput extends Component {
 	}
 }
 
-export default connect(null, { newRestaurant })(RestaurantInput);
+export default connect(null, {newRestaurant})(RestaurantInput);

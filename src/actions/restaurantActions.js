@@ -11,7 +11,6 @@ export const fetchRestaurants = () => dispatch => {
 }
 
 export const newRestaurant = restaurantData => dispatch => {
-	console.log('action called')
 	fetch('http://localhost:3000/api/restaurants', {
 			method: 'POST',
 			headers: {
@@ -20,8 +19,14 @@ export const newRestaurant = restaurantData => dispatch => {
 			body: JSON.stringify(restaurantData)
 		})
 		.then(res => res.json())
-		.then(data => dispatch({
-		type: NEW_RESTAURANT,
-		payload: data
-	}));
+		.then(data => {
+	        if (data.error) {
+	          console.log(data.error)
+	        } else {
+	          dispatch({
+				type: NEW_RESTAURANT,
+				payload: data
+			})}
+	    })
+	    .catch(console.log)
 }
