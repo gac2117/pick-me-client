@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import RestaurantContainer from './containers/RestaurantContainer'
-import RestaurantInput from './components/restaurants/RestaurantInput'
+import RestaurantList from './components/restaurants/RestaurantList'
 import RandomRestaurant from './components/RandomRestaurant'
 import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from './Navbar'
@@ -14,8 +14,8 @@ class App extends Component {
 			  	<React.Fragment>
 				  	<NavBar />
 					    <h1>Pick Me Pick Me!</h1>
-						<Route exact path="/" component={RestaurantContainer} />
-					 	<Route exact path="/new" component={RestaurantInput} />
+						<Route exact path="/" component={RestaurantList} />
+					 	<Route exact path="/new" component={RestaurantContainer} />
 			        	<Route exact path="/random" component={RandomRestaurant} />
 	        	</React.Fragment>
 			</div>
