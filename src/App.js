@@ -11,13 +11,13 @@ class App extends Component {
     return (
     	<BrowserRouter>
 		    <div className="App">
-		  	<React.Fragment>
-		  	<NavBar />
-		      <h1>Pick Me Pick Me!</h1>
-			<Route exact path="/" component={RestaurantContainer} />
-		 	<Route exact path="/new" component={RestaurantInput} />
-        	<Route exact path="/random" component={RandomRestaurant} />
-        	</React.Fragment>
+			  	<React.Fragment>
+				  	<NavBar />
+					    <h1>Pick Me Pick Me!</h1>
+						<Route exact path="/" component={RestaurantContainer} />
+					 	<Route exact path="/new" component={RestaurantInput} />
+			        	<Route exact path="/random" component={RandomRestaurant} />
+	        	</React.Fragment>
 			</div>
 		</BrowserRouter>
     );
