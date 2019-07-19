@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
+import Restaurant from './Restaurant';
 import { connect } from 'react-redux';
 
-class RestaurantList extends Component {
+class Restaurants extends Component {
 	
 
 	render() {
 
 		const restaurantList = this.props.restaurants.map(restaurant => {
-				return (
-					<li>{restaurant.attributes.name}</li>
-				)
+			return (
+				<Restaurant key={restaurant.id}
+				restaurant={restaurant}
+				/>
+			)
 		})
 
 		return(
@@ -25,4 +28,4 @@ const mapStateToProps = state => ({
 	restaurants: state.restaurants.items
 })
 
-export default connect(mapStateToProps)(RestaurantList);
+export default connect(mapStateToProps)(Restaurants);
