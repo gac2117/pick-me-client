@@ -19,9 +19,7 @@ class RandomRestaurant extends React.Component {
   }
   
   render() {
-    return (
-      
-    );
+    return ;
   }
 }
 

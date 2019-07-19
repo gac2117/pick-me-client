@@ -14,9 +14,6 @@ class RestaurantContainer extends Component {
 	render() {
 		return (
 			<div>
-			 <h3>Add a Restaurant</h3>
-			 <RestaurantInput />
-			 <br />
 			 <RestaurantList restaurants={this.props.restaurants} />
 			</div>
 		)
