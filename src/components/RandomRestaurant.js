@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class RandomRestaurant extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       min: 1,
-      max: this.props.num,
+      max: this.props.restaurants.length,
       number: 1
     }
   }
@@ -19,9 +20,16 @@ class RandomRestaurant extends React.Component {
   }
   
   render() {
-    return ;
+    
+    return (
+      this.state.number
+    )
   }
 }
 
-export default RandomRestaurant
+const mapStateToProps = (state) => ({
+  restaurants: state.restaurants.items
+})
+
+export default connect(mapStateToProps)(RandomRestaurant);
 
