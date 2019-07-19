@@ -20,7 +20,7 @@ const Home = () => {
 
 class App extends Component {
 	componentDidMount() {
-		this.props.fetchRestaurants();
+		this.props.fetchRestaurants()
 	}
 
   render() {

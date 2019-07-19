@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import TagList from '../components/tags/TagList';
+import TagInput from '../components/tags/TagInput';
 import { connect } from 'react-redux';
 import { fetchTags } from '../actions/tagActions';
 
 class TagContainer extends Component {
-	componentWillMount() {
-		this.props.fetchTags();
+	componentDidMount() {
+		this.props.fetchTags()
 	}
 
 	render() {
 		return (
 			<>
-				<TagList tags={this.props.tags} />
+				<TagInput restaurantId={this.props.restaurant.id} />
+				<TagList tags={this.props.tags} restaurantId={this.props.restaurant.id} />
 			</>
 		)
 	}

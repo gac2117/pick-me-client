@@ -1,4 +1,24 @@
-import { NEW_TAG, DELETE_TAG } from './types';
+import { FETCH_TAGS, NEW_TAG, DELETE_TAG } from './types';
+
+export const fetchTags = () => dispatch => {
+	fetch('http://localhost:3000/api/tags', {
+		method: 'GET',
+		headers: {
+			'content-type': 'application/json'
+		}
+	})
+	.then(res => res.json())
+	.then(data => {
+		if (data.error) {
+			console.log(data.error)
+		} else {
+			dispatch({
+			type: FETCH_TAGS,
+			payload: data
+		})}
+	})
+	.catch(console.log)
+}
 
 export const newTag = (tagData) => dispatch => {
 	fetch('http://localhost:3000/api/tags', {
@@ -34,7 +54,7 @@ export const deleteTag = (tagId) => dispatch => {
 			console.log(data.error)
 		} else {
 			dispatch({
-				type: DELETE_Tag,
+				type: DELETE_TAG,
 				id: tagId
 			})
 		}

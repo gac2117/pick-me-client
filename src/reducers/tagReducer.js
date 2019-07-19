@@ -4,10 +4,11 @@ export default function(state = { tags: [] }, action) {
 	switch(action.type) {
 		case FETCH_TAGS:
 		 	return {
-
+		 		...state,
+		 		tags: action.payload.data
 		 	};
 		case NEW_TAG:
-			const tag = {name: action.payload.name, restaurant_id: action.payload.restaurantId}
+			const tag = {name: action.payload.name, restaurant_id: action.payload.restaurant_id}
 			return {
 				...state,
 				tags: [...state.tags, tag]
