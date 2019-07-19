@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TagInput from '../components/tags/TagInput';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 class TagContainer extends Component {
 
@@ -13,4 +13,4 @@ class TagContainer extends Component {
 	}
 }
 
-export default connect(mapStateToProps)(TagContainer);
+export default TagContainer;
