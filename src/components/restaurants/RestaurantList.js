@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import Restaurant from './Restaurant';
 import { connect } from 'react-redux';
-import { fetchRestaurants } from '../../actions/restaurantActions' 
 
 class RestaurantList extends Component {
-	componentWillMount() {
-		this.props.fetchRestaurants();
-	}
+	
 
 	render() {
 
@@ -28,8 +25,7 @@ class RestaurantList extends Component {
 }
 
 const mapStateToProps = state => ({
-	restaurants: state.restaurants.items,
-	newRestaurant: state.restaurants.item,
+	restaurants: state.restaurants.items
 })
 
-export default connect(mapStateToProps, {fetchRestaurants})(RestaurantList);
+export default connect(mapStateToProps)(RestaurantList);
