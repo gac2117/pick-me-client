@@ -4,9 +4,15 @@ import RestaurantContainer from './containers/RestaurantContainer'
 import RestaurantList from './components/restaurants/RestaurantList'
 import RandomRestaurant from './components/RandomRestaurant'
 import { BrowserRouter, Route } from 'react-router-dom';
-import NavBar from './Navbar'
+import NavBar from './Navbar';
+import { connect } from 'react-redux';
+import { fetchRestaurants } from './actions/restaurantActions'
 
 class App extends Component {
+	componentDidMount() {
+		this.props.fetchRestaurants();
+	}
+
   render() {
     return (
     	<BrowserRouter>
@@ -24,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, {fetchRestaurants})(App);
