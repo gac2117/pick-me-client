@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 
 class RestaurantList extends Component {
 	
-
 	render() {
 
-		const restaurantList = this.props.restaurants.map(restaurant => {
-				return (
-					<li>{restaurant.attributes.name}</li>
+		const restaurantList = this.props.restaurants.map(r => {
+			return (
+				<p key={r.id}>{r.attributes.name}</p>
 				)
 		})
+		
 
 		return(
 			<>
-			<h3>List of Restaurants:</h3>
+			<h3>Current List of Restaurants:</h3>
 			{restaurantList}
 			</>
 		)

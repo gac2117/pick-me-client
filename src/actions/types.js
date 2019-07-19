@@ -4,6 +4,8 @@ export const NEW_RESTAURANT = 'NEW_RESTAURANT';
 
 export const DELETE_RESTAURANT = 'DELETE_RESTAURANT';
 
+export const FETCH_RESTAURANT = 'FETCH_RESTAURANT';
+
 export const FETCH_TAGS = 'FETCH_TAGS';
 
 export const NEW_TAG = 'NEW_TAG';

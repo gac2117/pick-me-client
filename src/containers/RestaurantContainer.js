@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
-import RestaurantList from '../components/restaurants/RestaurantList';
+import Restaurants from '../components/restaurants/Restaurants';
 import { connect } from 'react-redux';
 
 class RestaurantContainer extends Component {
@@ -9,14 +9,13 @@ class RestaurantContainer extends Component {
 		return (
 			<div>
 				<RestaurantInput />
-				<RestaurantList restaurants={this.props.restaurants} />
+				<Restaurants restaurants={this.props.restaurants} />
 			</div>
 		)
 	}
 }
 
 const mapStateToProps = state => ({
-	newRestaurant: state.restaurants.item,
 	restaurants: state.restaurants.items
 })
 

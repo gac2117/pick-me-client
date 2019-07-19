@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import Restaurant from './Restaurant';
-import { connect } from 'react-redux';
 
 class Restaurants extends Component {
 	
-
 	render() {
 
 		const restaurantList = this.props.restaurants.map(restaurant => {
@@ -24,8 +22,4 @@ class Restaurants extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	restaurants: state.restaurants.items
-})
-
-export default connect(mapStateToProps)(Restaurants);
+export default Restaurants;
