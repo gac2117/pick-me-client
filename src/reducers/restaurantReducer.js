@@ -3,7 +3,7 @@ import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT } from '../actions
 const initialState = {
 	items: [],
 	item: {}
-}
+};
 
 export default function(state = initialState, action) {
 	switch(action.type) {
@@ -18,11 +18,11 @@ export default function(state = initialState, action) {
 				...state,
 				item: rest,
 				items: [...state.items, rest]
-			}
+			};
 		case DELETE_RESTAURANT:
 			const rests = state.items.filter(restaurant => restaurant.id !== action.id);
-			return {...state, items: rests}
+			return {...state, items: rests};
 		default:
 			return state;
-	}
-}
+	};
+};

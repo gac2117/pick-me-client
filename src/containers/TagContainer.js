@@ -20,3 +20,5 @@ class TagContainer extends Component {
 const mapStateToProps = state => ({
 	tags: state.tags.tags 
 })
+
+export default connect(mapStateToProps, {fetchTags})(TagContainer);

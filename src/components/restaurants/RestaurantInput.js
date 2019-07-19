@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newRestaurant } from '../../actions/restaurantActions'; 
 
-
 class RestaurantInput extends Component {
 	constructor(props) {
 		super(props)

@@ -3,6 +3,6 @@ import restaurantReducer from './restaurantReducer';
 import tagReducer from './tagReducer';
 
 export default combineReducers({
-	restaurants: restaurantReducer
+	restaurants: restaurantReducer,
 	tags: tagReducer
 })
