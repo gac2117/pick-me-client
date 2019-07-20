@@ -19,7 +19,7 @@ class RandomRestaurant extends React.Component {
 
   onClick(e) {
     this.setState({
-      max: this.props.restaurants.length,
+      max: this.props.restaurants.length-1,
       number: this.generateNumber(this.state.min, this.state.max),
       restaurant: this.props.restaurants[this.state.number]
     })
