@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 class RestaurantList extends Component {
 	
@@ -7,7 +8,11 @@ class RestaurantList extends Component {
 
 		const restaurantList = this.props.restaurants.map(r => {
 			return (
-				<p key={r.id}>{r.attributes.name}</p>
+				<li key={r.id}>
+				<Link to={{
+					pathname: '/restaurant',
+					state: {restaurant: r}
+				}}>{r.attributes.name}</Link></li>
 				)
 		})
 		
