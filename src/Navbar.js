@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className="navbar">
       <NavLink to="/" exact style={link} activeStyle={{background: 'red'}}>Home</NavLink>
       <NavLink to="/new" exact style={link} activeStyle={{background: 'red'}}>Add a Restaurant</NavLink>
-      <NavLink to="/random" exact style={link} activeStyle={{background: 'red'}}>Pick Me</NavLink>
+      <NavLink to="/restaurants" exact style={link} activeStyle={{background: 'red'}}>List of Restaurants</NavLink>
     </div>
   );
 };

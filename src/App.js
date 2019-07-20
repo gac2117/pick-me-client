@@ -11,15 +11,6 @@ import { fetchRestaurants } from './actions/restaurantActions'
 import { fetchTags } from './actions/tagActions'
 
 
-const Home = () => {
-  return (
-    <div>
-      <RestaurantList />
-    </div>
-  );
-};
-
-
 class App extends Component {
 	componentWillMount() {
 		this.props.fetchRestaurants();
@@ -34,9 +25,10 @@ class App extends Component {
 				  	<NavBar />
 					    <h1>Pick Me Pick Me!</h1>
 					   
-						<Route exact path="/" component={Home} />
+					   	
+						<Route exact path="/" component={RandomRestaurant} />
 					 	<Route exact path="/new" component={RestaurantContainer} />
-			        	<Route exact path="/random" component={RandomRestaurant} />
+			        	<Route exact path="/restaurants" component={RestaurantList} />
 			        	<Route exact path="/restaurant" component={Restaurant} />
 	        	</React.Fragment>
 			</div>
