@@ -13,14 +13,13 @@ class RestaurantList extends Component {
 					pathname: '/restaurant',
 					state: {restaurant: r}
 				}}>{r.attributes.name}</Link></li>
-				)
+			)
 		})
 		
-
 		return(
 			<>
-			<h3>Current List of Restaurants:</h3>
-			{restaurantList}
+				<h3>Current List of Restaurants:</h3>
+				{restaurantList}
 			</>
 		)
 	}

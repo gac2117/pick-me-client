@@ -14,12 +14,13 @@ class Restaurant extends Component {
 
 		return (	
 			<>
-			<h1>Restaurant Details:</h1>
-			<h3>Name: {restaurant.attributes.name}
-			<br />
-			Location: {restaurant.attributes.location}</h3>
-			<button onClick={() => this.handleClick()}>Delete Restaurant</button>
-			<TagContainer restaurant={restaurant} />
+				<h1>Restaurant Details:</h1>
+				<h3>Name: {restaurant.attributes.name}
+				<br />
+				Location: {restaurant.attributes.location}</h3>
+				<button onClick={() => this.handleClick()}>Delete Restaurant</button>
+				
+				<TagContainer restaurant={restaurant} />
 			</>
 		)
 	}
