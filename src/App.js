@@ -8,6 +8,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from './Navbar';
 import { connect } from 'react-redux';
 import { fetchRestaurants } from './actions/restaurantActions'
+import { fetchTags } from './actions/tagActions'
+
 
 const Home = () => {
   return (
@@ -19,8 +21,9 @@ const Home = () => {
 
 
 class App extends Component {
-	componentDidMount() {
-		this.props.fetchRestaurants()
+	componentWillMount() {
+		this.props.fetchRestaurants();
+		this.props.fetchTags();
 	}
 
   render() {
@@ -42,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, {fetchRestaurants})(App);
+export default connect(null, {fetchRestaurants, fetchTags})(App);
