@@ -6,9 +6,8 @@ class TagContainer extends Component {
 
 	render() {
 		return (
-			<><TagList tags={this.props.restaurant.attributes.tags} restaurantId={this.props.restaurant.id} />
+			<><TagList tags={this.props.restaurant.attributes.tags} />
 			<TagInput restaurantId={this.props.restaurant.id} />
-			
 			</>
 		)
 	}
