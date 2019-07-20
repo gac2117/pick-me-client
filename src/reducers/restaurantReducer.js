@@ -2,8 +2,8 @@ import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT, FETCH_RESTAURANT 
 
 const initialState = {
 	items: [],
-	item: {}
-};
+	item: {id: '', attributes: {name: '', location: '', tags: []}
+}};
 
 export default function(state = initialState, action) {
 	switch(action.type) {
