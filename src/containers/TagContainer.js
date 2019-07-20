@@ -5,51 +5,26 @@ import { connect } from 'react-redux';
 
 class TagContainer extends Component {
 
-	state = {
-		restaurant: {}
-	}
-
-	renderTagList = (tags) => {
-		if (!Array.isArray(tags) || !tags.length) {
-			return null;
-		} else {
-			return (
-				<>
-				<TagList tags={this.props.restaurant.attributes.tags} />
-				</>
-			)
-		}
-	}
-
-	findRestaurant = (id) => {
-		this.props.restaurants.map(r => {
-			if (r.id === id) {
-				this.setState({
-					restaurant: r
-				})
-			} else {
-				return null;
-			}
-		})
-	}
-
 	render() {
-		console.log(this.props.restaurant.id)
+		
 		return (
 			<>
-			<br />
-			{this.findRestaurant(this.props.restaurant.id)}
-			<h3>Tags:</h3>
-			{this.renderTagList(this.props.restaurant.attributes.tags)}
-			<br />
-			Add Tags: <TagInput restaurantId={this.props.restaurant.id} />
+				<br />
+		
+				<h3>Tags:</h3>
+				<TagList 
+				 tags={this.props.tags}
+				 restaurantId={this.props.restaurant.id} />
+				<br />
+				Add Tags: 
+				<TagInput restaurantId={this.props.restaurant.id} />
 			</>
 		)
 	}
 }
 
 const mapStateToProps = (state) => ({
-  restaurants: state.restaurants.items
+	tags: state.tags.tags 
 })
 
-export default TagContainer;
+export default connect(mapStateToProps)(TagContainer);

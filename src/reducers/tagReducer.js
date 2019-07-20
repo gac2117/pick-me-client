@@ -1,7 +1,8 @@
 import { FETCH_TAGS, NEW_TAG, DELETE_TAG } from '../actions/types';
 
 const initialState = {
-	tags: []
+	tags: [], 
+	tag: {id: '', name: '', restaurant_id: ''}
 };
 
 export default function(state = initialState, action) {
@@ -14,16 +15,18 @@ export default function(state = initialState, action) {
 		 	};
 
 		case NEW_TAG:
-			const tag = {name: action.payload.name, restaurant_id: action.payload.restaurant_id}
+			const t = {name: action.payload.name, restaurant_id: action.payload.restaurant_id}
 			return {
 				...state,
-				tags: [...state.tags, tag]
+				tag: t,
+				tags: [...state.tags, t]
 			};
 
 		case DELETE_TAG:
-			const tags = state.tags.filter(t => t.id !== action.id)
+			const ts = state.tags.filter(t => t.id !== action.id)
 			return {
-				...state, tags
+				...state, 
+				tags: ts
 			};
 
 		default:

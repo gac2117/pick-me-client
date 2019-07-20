@@ -3,26 +3,21 @@ import Tag from './Tag';
 
 class TagList extends Component {
 
-	renderTags = (tags) => {
-		if (!Array.isArray(tags) || !tags.length) {
-			return null;
-		} else {
-			tags.map(t => {
-				return (
-				<>
-				Tags: <Tag key={t.id} tag={t} />
-				</>
-				)
-			})
-		}
-	}
-
 	render() {
-		const {tags} = this.props;
+		console.log(this.props)
+		const { tags, restaurantId } = this.props;
+		const ownTags = tags.filter(t => t.restaurant_id == restaurantId);
+		console.log(ownTags)
+		const renderTags = ownTags.map(t => {
+			return (
+				<Tag key={t.id}
+				 tag={t} />
+			)
+		})
 
 		return (
 			<>
-			{this.renderTags(tags)}
+				{renderTags}
 			</>
 		)
 		
