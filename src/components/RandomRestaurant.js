@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ChosenRestaurant from './restaurants/ChosenRestaurant'
+import ChosenRestaurant from './restaurants/ChosenRestaurant';
 
 class RandomRestaurant extends React.Component {
   constructor(props) {
