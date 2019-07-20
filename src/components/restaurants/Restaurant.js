@@ -7,11 +7,13 @@ class Restaurant extends Component {
 
 	handleClick() {
 		this.props.deleteRestaurant(this.props.location.state.restaurant.id);
+		const path = `/restaurants`;
+		this.props.history.push(path);
 	}
 
 	render() {
 		const {restaurant} = this.props.location.state
-
+		console.log(this.props)
 		return (	
 			<>
 				<h1>Restaurant Details:</h1>
