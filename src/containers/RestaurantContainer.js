@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
-import Restaurants from '../components/restaurants/Restaurants';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class RestaurantContainer extends Component {
 	
@@ -9,14 +9,19 @@ class RestaurantContainer extends Component {
 		return (
 			<>
 				<RestaurantInput />
-				<Restaurants restaurants={this.props.restaurants} />
+				<br />
+				<Link to={{
+					pathname: '/restaurant',
+					state: {restaurant: this.props.restaurant}
+				}}>{this.props.restaurant.attributes.name}</Link>
 			</>
 		)
 	}
 }
 
 const mapStateToProps = state => ({
-	restaurants: state.restaurants.items
+	restaurants: state.restaurants.items,
+	restaurant: state.restaurants.item
 })
 
 export default connect(mapStateToProps)(RestaurantContainer);

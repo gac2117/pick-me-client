@@ -6,17 +6,19 @@ import TagContainer from '../../containers/TagContainer'
 class Restaurant extends Component {
 
 	handleClick() {
-		this.props.deleteRestaurant(this.props.restaurant.id);
+		this.props.deleteRestaurant(this.props.location.state.restaurant.id);
 	}
 
 	render() {
-		const {restaurant} = this.props;
-		
+		const {restaurant} = this.props.location.state
+
 		return (	
 			<>
-			<p>{restaurant.attributes.name} at {restaurant.attributes.location}
-			  <button onClick={() => this.handleClick()}>delete</button>
-			</p>
+			<h1>Restaurant Details:</h1>
+			<h3>Name: {restaurant.attributes.name}
+			<br />
+			Location: {restaurant.attributes.location}</h3>
+			<button onClick={() => this.handleClick()}>Delete Restaurant</button>
 			<TagContainer restaurant={restaurant} />
 			</>
 		)

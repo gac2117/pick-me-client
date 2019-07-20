@@ -9,7 +9,7 @@ class ChosenRestaurant extends Component {
 			<>
 			<h1>And the chosen restaurant is...
 			<br /><br />
-			{restaurant.attributes.name} 
+			{restaurant.attributes.name}
 			</h1>
 			</>
 		)
