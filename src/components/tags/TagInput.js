@@ -3,8 +3,12 @@ import { connect } from 'react-redux';
 import { newTag } from '../../actions/tagActions';
 
 class TagInput extends Component {
-	state = {
-		name: ''
+
+	constructor(props) {
+		super(props)
+		this.state = {
+			name: ''
+		};
 	}
 
 	handleChange(e) {
