@@ -11,14 +11,12 @@ class Restaurant extends Component {
 
 	render() {
 		const {restaurant} = this.props;
-		const tags = restaurant.attributes.tags.map(t => t.name)
 		
 		return (	
 			<>
 			<p>{restaurant.attributes.name} at {restaurant.attributes.location}
 			  <button onClick={() => this.handleClick()}>delete</button>
 			</p>
-			Tags: {tags} 
 			<TagContainer restaurant={restaurant} />
 			</>
 		)
