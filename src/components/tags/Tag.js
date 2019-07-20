@@ -10,12 +10,12 @@ class Tag extends Component {
 
 	render(){
 		const {tag} = this.props;
-		console.log(tag)
+		
 		return (
 			<>
-			<p>{tag.name}
-			<button onClick={() => this.handleClick()}>X</button>
-			</p>
+				<p>{tag.name}
+				<button onClick={() => this.handleClick()}>X</button>
+				</p>
 			</>
 		)
 	}
