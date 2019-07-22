@@ -23,8 +23,6 @@ class App extends Component {
 		    <div className="App">
 			  	<React.Fragment>
 				  	<NavBar />
-					    <h1>Pick Me Pick Me!</h1>
-					   	
 						<Route exact path="/" component={RandomRestaurant} />
 					 	<Route exact path="/new" component={RestaurantContainer} />
 			        	<Route exact path="/restaurants" component={RestaurantList} />
