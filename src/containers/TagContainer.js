@@ -9,7 +9,7 @@ class TagContainer extends Component {
 	render() {
 		return (
 			<div className="Container">
-				<Card body outline color="secondary">
+				<Card>
 				<CardHeader tag="h3">Tags:</CardHeader>
 				<CardBody>
 

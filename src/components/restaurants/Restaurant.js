@@ -17,8 +17,7 @@ class Restaurant extends Component {
 		console.log(this.props)
 		return (	
 			<div className="Container">
-				<h1>Restaurant Details:</h1>
-				<Card body outline color="secondary">
+				<Card>
 					<CardHeader tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
 					<CardTitle>Location: {restaurant.attributes.location}</CardTitle>
