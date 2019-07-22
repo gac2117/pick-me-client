@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ChosenRestaurant from './restaurants/ChosenRestaurant';
+import { Button } from 'reactstrap';
 
 class RandomRestaurant extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class RandomRestaurant extends React.Component {
   render() {
     return (
       <>
-      <button onClick={(e) => this.onClick(e)}>Choose a restaurant</button>
+      <Button color="danger" onClick={(e) => this.onClick(e)}>Choose a restaurant</Button>
       <ChosenRestaurant restaurant={this.state.restaurant} />
       </>
     )
