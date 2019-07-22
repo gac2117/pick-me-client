@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newTag } from '../../actions/tagActions';
-import { Form, Input, Button } from 'reactstrap';
+import { Form, Button } from 'reactstrap';
 
 class TagInput extends Component {
 
