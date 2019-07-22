@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  background-color: pink;
 }
 
 /*.App-header {

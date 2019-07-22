@@ -20,6 +20,7 @@ class NavBar extends Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -28,7 +29,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div className="navbar">
+      <div>
         <Navbar color="light" light expand="lg">
           <NavbarBrand href="/">Pick Me!</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
