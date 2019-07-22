@@ -1,9 +1,17 @@
 .App {
   text-align: center;
   margin: auto;
-  width: 70%;
+  width: 60%;
   padding: 10px;
   background-color: pink;
+}
+
+.Container {
+  text-align: center;
+  width: 100%;
+  height: 60%;
+  border: 1px dashed black;
+  padding: 30px 30px;
 }
 
 /*.App-header {
