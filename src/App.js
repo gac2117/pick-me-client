@@ -24,7 +24,6 @@ class App extends Component {
 			  	<React.Fragment>
 				  	<NavBar />
 				  		<br />
-				  		<h3>Can't decide where to go eat??</h3>
 						<Route exact path="/" component={RandomRestaurant} />
 					 	<Route exact path="/new" component={RestaurantContainer} />
 			        	<Route exact path="/restaurants" component={RestaurantList} />

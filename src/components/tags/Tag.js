@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {deleteTag} from '../../actions/tagActions';
-import {Button} from 'reactstrap';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { deleteTag } from '../../actions/tagActions';
+import { Button } from 'reactstrap';
 
 class Tag extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tag from './Tag';
-import {Button} from 'reactstrap'
+import { Button } from 'reactstrap'
 
 class TagList extends Component {
 
@@ -11,11 +11,10 @@ class TagList extends Component {
 		const renderTags = ownTags.map(t => {
 			return (
 				<>
-				<Button color="info" size="sm" disabled key={t.id}>
-					<Tag tag={t} />
-				</Button>{'   '}
-				 </>
-				
+					<Button color="info" size="sm" disabled key={t.id}>
+						<Tag tag={t} />
+					</Button>{'   '}
+				</>
 			)
 		})
 
@@ -24,7 +23,6 @@ class TagList extends Component {
 				{renderTags}
 			</>
 		)
-		
 	}
 }
 

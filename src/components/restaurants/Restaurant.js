@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteRestaurant } from '../../actions/restaurantActions'; 
 import TagContainer from '../../containers/TagContainer'
-import { Card, CardBody, CardTitle, CardHeader, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardHeader, Button } from 'reactstrap';
 
 class Restaurant extends Component {
 
@@ -19,16 +19,15 @@ class Restaurant extends Component {
 				<Card>
 					<CardHeader tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
-					<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>
-					<br />
-					<Button color="danger" size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
-					<TagContainer restaurant={restaurant} />
+						<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>
+						<br />
+						<Button color="danger" size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
+						<TagContainer restaurant={restaurant} />
 					</CardBody>
 				</Card>
 			</div>
 		)
 	}
 }
-
 
 export default connect(null, {deleteRestaurant})(Restaurant);

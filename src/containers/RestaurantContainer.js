@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RestaurantInput from '../components/restaurants/RestaurantInput';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
 class RestaurantContainer extends Component {
 	
@@ -10,10 +11,16 @@ class RestaurantContainer extends Component {
 			<>
 				<RestaurantInput />
 				<br />
-				<Link to={{
-					pathname: '/restaurant',
-					state: {restaurant: this.props.restaurant}
-				}}>{this.props.restaurant.attributes.name}</Link>
+				<Card>
+					<CardBody>
+						<CardTitle tag="h3">
+							<Link to={{
+								pathname: '/restaurant',
+								state: {restaurant: this.props.restaurant}
+							}}>{this.props.restaurant.attributes.name}</Link>
+						</CardTitle>
+					</CardBody>
+				</Card>
 			</>
 		)
 	}

@@ -33,9 +33,10 @@ class RandomRestaurant extends React.Component {
   render() {
     return (
       <div className="Container">
-      <Button color="danger" onClick={(e) => this.onClick(e)}>Pick ME!</Button>
-      
-      <ChosenRestaurant restaurant={this.state.restaurant} />
+        <h3>Can't decide where to go eat??</h3>
+        <br />
+        <Button color="danger" onClick={(e) => this.onClick(e)}>Pick ME!</Button>
+        <ChosenRestaurant restaurant={this.state.restaurant} />
       </div>
     )
   }

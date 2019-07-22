@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TagInput from '../components/tags/TagInput';
 import TagList from '../components/tags/TagList';
 import { connect } from 'react-redux';
-import { Card, CardText, CardBody, CardTitle, CardHeader, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardBody, CardHeader } from 'reactstrap';
 
 class TagContainer extends Component {
 
@@ -10,14 +10,13 @@ class TagContainer extends Component {
 		return (
 			<div className="Container">
 				<Card>
-				<CardHeader tag="h3">Tags:</CardHeader>
-				<CardBody>
-
-				<TagList 
-				 tags={this.props.tags}
-				 restaurantId={this.props.restaurant.id} />
-				<TagInput restaurantId={this.props.restaurant.id} />
-				</CardBody>
+					<CardHeader tag="h3">Tags:</CardHeader>
+					<CardBody>
+						<TagList 
+						  tags={this.props.tags}
+						  restaurantId={this.props.restaurant.id} />
+						<TagInput restaurantId={this.props.restaurant.id} />
+					</CardBody>
 				</Card>
 			</div>
 		)

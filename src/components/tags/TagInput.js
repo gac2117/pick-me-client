@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newTag } from '../../actions/tagActions';
-import {Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import { Form, Input, Button } from 'reactstrap';
 
 class TagInput extends Component {
 
@@ -36,7 +36,7 @@ class TagInput extends Component {
 	render() {
 		return (
 			<div className="Container">
-			<h5>Add Tags: </h5>
+				<h5>Add Tags: </h5>
 				<Form onSubmit={(e) => this.handleSubmit(e)}>
 					<input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />{'   '}
 					<Button size="sm">Add</Button>
