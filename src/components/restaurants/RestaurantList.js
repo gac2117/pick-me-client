@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 class RestaurantList extends Component {
 	
@@ -8,18 +9,20 @@ class RestaurantList extends Component {
 
 		const restaurantList = this.props.restaurants.map(r => {
 			return (
-				<li key={r.id}>
-				<Link to={{
+				<ListGroupItem tag={Link} to={{
 					pathname: '/restaurant',
 					state: {restaurant: r}
-				}}>{r.attributes.name}</Link></li>
+				}} action>{r.attributes.name}</ListGroupItem>
 			)
 		})
 		
 		return(
 			<>
 				<h3>Current List of Restaurants:</h3>
-				{restaurantList}
+				<ListGroup>
+			    {restaurantList}  
+			      </ListGroup>
+				
 			</>
 		)
 	}
