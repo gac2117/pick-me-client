@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newRestaurant } from '../../actions/restaurantActions'; 
+import {Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
 class RestaurantInput extends Component {
 	constructor(props) {
@@ -37,14 +38,25 @@ class RestaurantInput extends Component {
 		return(
 			<div>
 				<h3>Add a Restaurant</h3>
-				<form onSubmit={(e) => this.handleSubmit(e)}>
-					<label>Restaurant Name: </label>
-					<input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} /><br /><br />
-					<label>Restaurant Location: </label>
-					<input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
-					<br /><br />
-					<button type="submit">Add Restaurant</button>
-				</form>
+				<Form onSubmit={(e) => this.handleSubmit(e)} >
+					<FormGroup row>
+						<Label for="name" sm={2}>Restaurant Name: </Label>
+						<Col sm={2}>
+							<Input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />
+						</Col>
+					</FormGroup>
+					<FormGroup row>
+						<Label for="location" sm={2}>Restaurant Location: </Label>
+						<Col sm={2}>
+							<Input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
+						</Col>
+					</FormGroup>
+			        <FormGroup check row>
+			          <Col sm={{ size: 2 }}>
+			            <Button className="float-center">Add Restaurant</Button>
+			          </Col>
+			        </FormGroup>
+				</Form>
 			</div>
 		)
 	}
