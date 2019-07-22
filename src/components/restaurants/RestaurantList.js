@@ -17,13 +17,13 @@ class RestaurantList extends Component {
 		})
 		
 		return(
-			<>
+			<div className="Container">
 				<h3>Current List of Restaurants:</h3>
+				<br />
 				<ListGroup>
-			    {restaurantList}  
-			      </ListGroup>
-				
-			</>
+			   		{restaurantList}  
+		    	</ListGroup>
+			</div>
 		)
 	}
 }
