@@ -20,9 +20,11 @@ class App extends Component {
   render() {
     return (
     	<BrowserRouter>
-		    <div>
+		   	<div>
 			  	<React.Fragment>
 				  	<NavBar />
+				  		<br />
+				  		<h3>Can't decide where to go eat??</h3>
 						<Route exact path="/" component={RandomRestaurant} />
 					 	<Route exact path="/new" component={RestaurantContainer} />
 			        	<Route exact path="/restaurants" component={RestaurantList} />

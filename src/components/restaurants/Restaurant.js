@@ -14,13 +14,12 @@ class Restaurant extends Component {
 
 	render() {
 		const {restaurant} = this.props.location.state
-		console.log(this.props)
 		return (	
 			<div className="Container">
 				<Card>
 					<CardHeader tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
-					<CardTitle>Location: {restaurant.attributes.location}</CardTitle>
+					<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>
 					<br />
 					<Button color="danger" size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
 					<TagContainer restaurant={restaurant} />
