@@ -2,23 +2,26 @@ import React, { Component } from 'react';
 import TagInput from '../components/tags/TagInput';
 import TagList from '../components/tags/TagList';
 import { connect } from 'react-redux';
+import { Card, CardText, CardBody, CardTitle, CardHeader, CardSubtitle, Button } from 'reactstrap';
 
 class TagContainer extends Component {
 
 	render() {
-		
 		return (
-			<>
-				<br />
-		
-				<h3>Tags:</h3>
+			<div className="Container">
+				<Card body outline color="secondary">
+				<CardHeader tag="h3">Tags:</CardHeader>
+				<CardBody>
+
 				<TagList 
 				 tags={this.props.tags}
 				 restaurantId={this.props.restaurant.id} />
 				<br />
 				Add Tags: 
 				<TagInput restaurantId={this.props.restaurant.id} />
-			</>
+				</CardBody>
+				</Card>
+			</div>
 		)
 	}
 }

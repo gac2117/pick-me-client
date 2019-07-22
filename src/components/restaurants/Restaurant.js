@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteRestaurant } from '../../actions/restaurantActions'; 
 import TagContainer from '../../containers/TagContainer'
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardHeader, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardHeader, CardSubtitle, Button } from 'reactstrap';
 
 class Restaurant extends Component {
 
@@ -22,12 +21,9 @@ class Restaurant extends Component {
 				<Card body outline color="secondary">
 					<CardHeader tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
-					
 					<CardTitle>Location: {restaurant.attributes.location}</CardTitle>
 					<br />
 					<Button color="danger" size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
-					<br />
-					
 					<TagContainer restaurant={restaurant} />
 					</CardBody>
 				</Card>

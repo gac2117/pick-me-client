@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tag from './Tag';
+import {Button} from 'reactstrap'
 
 class TagList extends Component {
 
@@ -9,9 +10,12 @@ class TagList extends Component {
 		const ownTags = tags.filter(t => t.restaurant_id == restaurantId);
 		const renderTags = ownTags.map(t => {
 			return (
-				<div key={t.id}>
+				<>
+				<Button color="info" size="sm" disabled key={t.id}>
 					<Tag tag={t} />
-				 </div>
+				</Button>{'   '}
+				 </>
+				
 			)
 		})
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {deleteTag} from '../../actions/tagActions';
+import {Button} from 'reactstrap';
 
 class Tag extends Component {
 
@@ -13,9 +14,8 @@ class Tag extends Component {
 		
 		return (
 			<>
-				<p>{tag.name}
-				<button onClick={() => this.handleClick()}>X</button>
-				</p>
+				{tag.name}{'  '}
+				<Button outline color="danger" size="sm" onClick={() => this.handleClick()}>X</Button>
 			</>
 		)
 	}
