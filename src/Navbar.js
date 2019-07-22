@@ -31,7 +31,7 @@ class NavBar extends Component {
     return (
       <div>
         <Navbar color="light" light expand="lg">
-          <NavbarBrand href="/">Pick Me!</NavbarBrand>
+          <NavbarBrand tag={Link} exact to="/">Pick Me!</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
