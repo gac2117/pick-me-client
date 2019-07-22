@@ -16,8 +16,6 @@ class TagContainer extends Component {
 				<TagList 
 				 tags={this.props.tags}
 				 restaurantId={this.props.restaurant.id} />
-				<br />
-				Add Tags: 
 				<TagInput restaurantId={this.props.restaurant.id} />
 				</CardBody>
 				</Card>
