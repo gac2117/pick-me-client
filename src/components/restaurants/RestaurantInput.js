@@ -36,23 +36,24 @@ class RestaurantInput extends Component {
 
 	render() {
 		return(
-			<div>
+			<div className="Container">
 				<h3>Add a Restaurant</h3>
+				<br />
 				<Form onSubmit={(e) => this.handleSubmit(e)} >
 					<FormGroup row>
-						<Label for="name" sm={2}>Restaurant Name: </Label>
-						<Col sm={2}>
+						<Label for="name" sm={4}>Restaurant Name: </Label>
+						<Col sm={7}>
 							<Input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />
 						</Col>
 					</FormGroup>
 					<FormGroup row>
-						<Label for="location" sm={2}>Restaurant Location: </Label>
-						<Col sm={2}>
+						<Label for="location" sm={4}>Restaurant Location: </Label>
+						<Col sm={7}>
 							<Input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
 						</Col>
 					</FormGroup>
-			        <FormGroup check row>
-			          <Col sm={{ size: 2 }}>
+			        <FormGroup row>
+			          <Col sm={12}>
 			            <Button className="float-center">Add Restaurant</Button>
 			          </Col>
 			        </FormGroup>
