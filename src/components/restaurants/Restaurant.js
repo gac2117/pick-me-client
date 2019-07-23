@@ -21,7 +21,6 @@ class Restaurant extends Component {
 					<CardBody>
 						<CardTitle tag="h4">Name: {restaurant.attributes.name}</CardTitle>
 						<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>
-
 						<br />
 						<Button style={{backgroundColor: '#FE5F55'}} size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
 						<TagContainer restaurant={restaurant} />
