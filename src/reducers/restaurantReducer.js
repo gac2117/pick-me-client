@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT, FETCH_RESTAURANT, CLEAR_RESTAURANT } from '../actions/types';
+import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT, CLEAR_RESTAURANT } from '../actions/types';
 
 const initialState = {
 	items: [],
@@ -25,12 +25,6 @@ export default function(state = initialState, action) {
 		case DELETE_RESTAURANT:
 			const rests = state.items.filter(restaurant => restaurant.id !== action.id);
 			return {...state, items: rests};
-
-		case FETCH_RESTAURANT:
-			return {
-				...state,
-				item: action.payload.data
-			}
 
 		case CLEAR_RESTAURANT:
 			return {
