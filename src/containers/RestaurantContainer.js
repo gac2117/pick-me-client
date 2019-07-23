@@ -31,7 +31,6 @@ class RestaurantContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-	restaurants: state.restaurants.items,
 	restaurant: state.restaurants.item
 })
 
