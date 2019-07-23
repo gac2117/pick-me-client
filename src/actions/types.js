@@ -11,3 +11,5 @@ export const FETCH_TAGS = 'FETCH_TAGS';
 export const NEW_TAG = 'NEW_TAG';
 
 export const DELETE_TAG = 'DELETE_TAG';
+
+export const CLEAR_RESTAURANT = 'CLEAR_RESTAURANT';

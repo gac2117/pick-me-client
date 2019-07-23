@@ -1,4 +1,4 @@
-import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT, FETCH_RESTAURANT } from '../actions/types';
+import { FETCH_RESTAURANTS, NEW_RESTAURANT, DELETE_RESTAURANT, FETCH_RESTAURANT, CLEAR_RESTAURANT } from '../actions/types';
 
 const initialState = {
 	items: [],
@@ -30,6 +30,12 @@ export default function(state = initialState, action) {
 			return {
 				...state,
 				item: action.payload.data
+			}
+
+		case CLEAR_RESTAURANT:
+			return {
+				...state,
+				item: {id: '', attributes: {name: '', location: '', tags: []}}
 			}
 
 		default:
