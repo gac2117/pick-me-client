@@ -43,13 +43,13 @@ class RestaurantInput extends Component {
 					<FormGroup row>
 						<Label for="name" sm={4}>Restaurant Name: </Label>
 						<Col sm={7}>
-							<Input type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />
+							<Input required type="text" name="name" value={this.state.name} onChange={(e) => this.handleChange(e)} />
 						</Col>
 					</FormGroup>
 					<FormGroup row>
 						<Label for="location" sm={4}>Restaurant Location: </Label>
 						<Col sm={7}>
-							<Input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
+							<Input required type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
 						</Col>
 					</FormGroup>
 			        <FormGroup row>
