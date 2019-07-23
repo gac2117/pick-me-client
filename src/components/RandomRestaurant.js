@@ -35,7 +35,7 @@ class RandomRestaurant extends React.Component {
       <div className="Container">
         <h3>Can't decide where to go eat??</h3>
         <br />
-        <Button color="danger" onClick={(e) => this.onClick(e)}>Pick ME!</Button>
+        <Button style={{backgroundColor: '#FE5F55'}} onClick={(e) => this.onClick(e)}>Pick ME!</Button>
         <ChosenRestaurant restaurant={this.state.restaurant} />
       </div>
     )

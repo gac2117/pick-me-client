@@ -54,7 +54,7 @@ class RestaurantInput extends Component {
 					</FormGroup>
 			        <FormGroup row>
 			          <Col sm={12}>
-			            <Button className="float-center">Add Restaurant</Button>
+			            <Button className="float-center" style={{backgroundColor: '#FE5F55'}}>Add Restaurant</Button>
 			          </Col>
 			        </FormGroup>
 				</Form>

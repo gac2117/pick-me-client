@@ -17,11 +17,11 @@ class Restaurant extends Component {
 		return (	
 			<div className="Container">
 				<Card>
-					<CardHeader tag="h3">{restaurant.attributes.name}</CardHeader>
+					<CardHeader style={{backgroundColor: '#7A9E9F', color: 'white'}} tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
 						<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>
 						<br />
-						<Button color="danger" size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
+						<Button style={{backgroundColor: '#FE5F55'}} size="sm" onClick={() => this.handleClick()}>Delete Restaurant</Button>
 						<TagContainer restaurant={restaurant} />
 					</CardBody>
 				</Card>

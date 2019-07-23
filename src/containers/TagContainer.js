@@ -10,7 +10,7 @@ class TagContainer extends Component {
 		return (
 			<div className="Container">
 				<Card>
-					<CardHeader tag="h3">Tags:</CardHeader>
+					<CardHeader style={{backgroundColor: '#7A9E9F', color: 'white'}} tag="h3">Tags:</CardHeader>
 					<CardBody>
 						<TagList 
 						  tags={this.props.tags}

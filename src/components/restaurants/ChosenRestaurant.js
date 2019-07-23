@@ -10,7 +10,7 @@ class ChosenRestaurant extends Component {
 		return (	
 			<div className="Container">
 				<Card>
-					<CardHeader tag="h3">Let's go eat at</CardHeader>
+					<CardHeader style={{backgroundColor: '#7A9E9F', color: 'white'}} tag="h3">Let's go eat at</CardHeader>
 					<CardBody>
 						<CardTitle tag="h4"><Link to={{
 							pathname: '/restaurant',
