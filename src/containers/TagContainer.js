@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import TagInput from '../components/tags/TagInput';
 import TagList from '../components/tags/TagList';
-import { connect } from 'react-redux';
 import { Card, CardBody, CardHeader } from 'reactstrap';
+import { connect } from 'react-redux';
 
 class TagContainer extends Component {
 

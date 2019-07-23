@@ -16,6 +16,7 @@ class Tag extends Component {
 			<>
 				{tag.name}{'  '}
 				<Button outline color="danger" size="sm" onClick={() => this.handleClick()}>X</Button>
+				{'   '}
 			</>
 		)
 	}
