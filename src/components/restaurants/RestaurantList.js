@@ -9,7 +9,10 @@ class RestaurantList extends Component {
 
 		const restaurantList = this.props.restaurants.map(r => {
 			return (
-				<ListGroupItem tag={Link} to={{
+				<ListGroupItem 
+				  key={r.id} 
+				  tag={Link} 
+				  to={{
 					pathname: '/restaurant',
 					state: {restaurant: r}
 				}} action>{r.attributes.name}</ListGroupItem>
