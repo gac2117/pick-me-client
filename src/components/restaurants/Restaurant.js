@@ -16,7 +16,7 @@ class Restaurant extends Component {
 		const {restaurant} = this.props.location.state
 		return (	
 			<div className="Container">
-				<Card>
+				<Card style={{ border: '1px solid #4F6367', borderRadius: '5px'}}>
 					<CardHeader style={{backgroundColor: '#7A9E9F', color: 'white'}} tag="h3">{restaurant.attributes.name}</CardHeader>
 					<CardBody>
 						<CardTitle tag="h4">Location: {restaurant.attributes.location}</CardTitle>

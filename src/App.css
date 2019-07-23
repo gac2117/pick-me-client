@@ -5,6 +5,8 @@
   padding: 10px;
   background-color: #B8D8D8;
   color: #4F6367;
+  border: 2px solid #4F6367;
+  border-radius: 8px;
 }
 
 .Container {

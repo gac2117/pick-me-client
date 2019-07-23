@@ -20,7 +20,7 @@ class RestaurantList extends Component {
 			<div className="Container">
 				<h3>Current List of Restaurants:</h3>
 				<br />
-				<ListGroup>
+				<ListGroup style={{ border: '1px solid #4F6367', borderRadius: '5px'}}>
 			   		{restaurantList}  
 		    	</ListGroup>
 			</div>

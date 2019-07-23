@@ -30,7 +30,8 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar style={{backgroundColor: '#4F6367'}} dark expand="lg">
+        <Navbar style={{backgroundColor: '#4F6367', border: '2px solid #4F6367',
+  borderRadius: '3px'}} dark expand="lg">
           <NavbarBrand tag={Link} exact to="/">Pick Me!</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
