@@ -33,7 +33,6 @@ export const newTag = (tagData) => dispatch => {
 	        if (data.error) {
 	          console.log(data.error)
 	        } else {
-	        	console.log(data)
 	          dispatch({
 				type: NEW_TAG,
 				payload: data

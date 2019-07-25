@@ -15,7 +15,7 @@ export default function(state = initialState, action) {
 		 	};
 
 		case NEW_TAG:
-			const t = {name: action.payload.name, restaurant_id: action.payload.restaurant_id}
+			const t = {id: action.payload.id, name: action.payload.name, restaurant_id: action.payload.restaurant_id}
 			return {
 				...state,
 				tag: t,
