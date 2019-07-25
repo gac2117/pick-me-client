@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardBody, CardTitle, CardHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-class ChosenRestaurant extends Component {
+function ChosenRestaurant({restaurant}) {
 
-	render() {
-		const {restaurant} = this.props;
-		
 		return (	
 			<div className="Container">
 				<Card style={{ border: '2px solid #4F6367',
@@ -23,7 +20,7 @@ class ChosenRestaurant extends Component {
 				</Card>
 			</div>
 		)
-	}
+	
 }
 
 export default ChosenRestaurant;

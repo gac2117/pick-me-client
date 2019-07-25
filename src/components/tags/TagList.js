@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Tag from './Tag';
 
-class TagList extends Component {
-
-	render() {
-		const { tags, restaurantId } = this.props;
+function TagList({tags, restaurantId}) {
 
 		// eslint-disable-next-line
 		const ownTags = tags.filter(t => t.restaurant_id == restaurantId);
@@ -20,7 +17,7 @@ class TagList extends Component {
 				{renderTags}
 			</>
 		)
-	}
+	
 }
 
 export default TagList;

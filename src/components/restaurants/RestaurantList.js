@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 function RestaurantList({restaurants}){
-	console.log({restaurants})
 
 	const restaurantList = restaurants.map(r => {
 		return (
