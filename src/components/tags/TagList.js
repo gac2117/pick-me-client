@@ -1,7 +1,7 @@
 import React from 'react';
 import Tag from './Tag';
 
-function TagList({tags, restaurantId}) {
+const TagList = ({ tags, restaurantId }) => {
 
 		// eslint-disable-next-line
 		const ownTags = tags.filter(t => t.restaurant_id == restaurantId);

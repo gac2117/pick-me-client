@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
-function RestaurantList({restaurants}){
+const RestaurantList = ({ restaurants }) => {
 
 	const restaurantList = restaurants.map(r => {
 		return (
