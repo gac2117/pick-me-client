@@ -3,7 +3,7 @@ import { Card, CardBody, CardTitle, CardHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const ChosenRestaurant = ({ restaurant }) => {
-	console.log({restaurant})
+
 	return (	
 		<div className="Container">
 			<Card style={{ border: '2px solid #4F6367',

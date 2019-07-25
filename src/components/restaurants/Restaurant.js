@@ -6,7 +6,6 @@ import { Card, CardBody, CardTitle, CardHeader, Button } from 'reactstrap';
 
 
 const Restaurant = (props) => {
-	console.log(props)
 
 	const {restaurant} = props.location.state
 
