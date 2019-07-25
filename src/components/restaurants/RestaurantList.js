@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
-const RestaurantList = ({ restaurants }) => {
+const RestaurantList = (props) => {
 
-	const restaurantList = restaurants.map(r => {
+	const restaurantList = props.restaurants.map(r => {
 		return (
 			<ListGroupItem 
 			  key={r.id} 
