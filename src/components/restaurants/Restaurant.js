@@ -18,13 +18,13 @@ const Restaurant = props => {
       <Card style={{ border: '1px solid #4F6367', borderRadius: '5px' }}>
         <CardHeader
           style={{ backgroundColor: '#7A9E9F', color: 'white' }}
-          tag='h3'
+          tag='h4'
         >
           Restaurant Details:
         </CardHeader>
         <CardBody>
-          <CardTitle tag='h4'>Name: {restaurant.attributes.name}</CardTitle>
-          <CardTitle tag='h4'>
+          <CardTitle tag='h5'>Name: {restaurant.attributes.name}</CardTitle>
+          <CardTitle tag='h5'>
             Location: {restaurant.attributes.location}
           </CardTitle>
           <br />
@@ -42,7 +42,4 @@ const Restaurant = props => {
   );
 };
 
-export default connect(
-  null,
-  { deleteRestaurant }
-)(Restaurant);
+export default connect(null, { deleteRestaurant })(Restaurant);

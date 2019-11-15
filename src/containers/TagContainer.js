@@ -11,7 +11,7 @@ class TagContainer extends Component {
         <Card style={{ border: '1px solid #4F6367', borderRadius: '5px' }}>
           <CardHeader
             style={{ backgroundColor: '#7A9E9F', color: 'white' }}
-            tag='h3'
+            tag='h4'
           >
             Tags:
           </CardHeader>
